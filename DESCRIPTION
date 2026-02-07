@@ -1,0 +1,23 @@
+Package: RTemplate
+Type: Package
+Title: Template R Package for Reproducible Data Analysis
+Version: 0.1.0
+Authors@R: c(
+    person(given = "Template", family = "Author", role = c("aut", "cre"),
+           email = "template@example.com")
+  )
+Description: Example package that wraps a simple Boston housing data
+    analysis pipeline (cleaning, modeling, and plotting) into a single
+    function `make_figures()` for demonstration of reproducible and
+    automated workflows.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: R (>= 3.6.0)
+Imports:
+    ggplot2,
+    dplyr,
+    readr
+Suggests:
+    devtools

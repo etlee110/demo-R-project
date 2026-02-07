@@ -1,0 +1,26 @@
+# R-specific
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+.Rproj
+
+# renv
+renv/library/
+renv/staging/
+
+# RStudio
+.Rproj.user/
+.Rproj.user
+
+# OS / editor
+.DS_Store
+*.swp
+*.swo
+
+# Output
+output/
+
+# Package build artifacts
+*.tar.gz
+.Rcheck/
