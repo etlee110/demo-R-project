@@ -24,3 +24,4 @@ output/
 # Package build artifacts
 *.tar.gz
 .Rcheck/
+.vscode/
