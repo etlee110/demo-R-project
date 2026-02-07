@@ -1,4 +1,4 @@
-renv::init()
+
 
 # 01_clean.R
 # Example data cleaning script for Boston housing data.
@@ -7,8 +7,7 @@ renv::init()
 # For project-relative paths, if needed. Install once in R with:
 # install.packages("here")
 library(here)
-here::i_am("scripts/01_clean.R")
-# Set project root to the parent directory of "scripts"
+here::i_am("scripts/01_clean.R")  # declare this script's location
 
 library(readr)
 library(dplyr)
@@ -20,16 +19,15 @@ library(dplyr)
 # When collaborating, we want to avoid hardcoding absolute paths. 
 # Instead, we use relative paths from the project root.
 
-# Use only relative paths
-raw_path <- file.path("raw_data", "boston.txt")
+# Use project-relative paths via here()
+raw_path <- here::here("raw_data", "boston.txt")
 
 
 column_names <- c("CRIM", "ZN", "INDUS", "CHAS", "NOX", "RM", "AGE", "DIS", 
                  "RAD", "TAX", "PTRATIO", "B", "LSTAT", "MEDV")
 
 # Read the file using here package
-# here is both a package and a function within that package
-raw_data <- readLines(here::here("raw_data", "boston.txt"))
+raw_data <- readLines(raw_path)
 
 # Find the first line containing numeric data
 start_line <- which(grepl("^\\s*[0-9]", raw_data))[1]
